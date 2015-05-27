@@ -1,6 +1,5 @@
 package ipforcity;
 
-import java.util.Optional;
 
 /**
  * Unique code for a city with any non-ascii characters stripped

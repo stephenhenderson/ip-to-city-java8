@@ -107,6 +107,7 @@ public enum TwoLetterIsoCountry {
     IRAQ("IQ"),
     IRELAND("IE"),
     ISRAEL("IL"),
+    IRAN("IR"),
     ITALY("IT"),
     JAMAICA("JM"),
     JAPAN("JP"),
@@ -258,7 +259,7 @@ public enum TwoLetterIsoCountry {
     }
     
     public static TwoLetterIsoCountry fromCode(String code) throws UnknownCountryCodeException {
-        TwoLetterIsoCountry country = codeToCountries.get(code);
+        TwoLetterIsoCountry country = codeToCountries.get(code.toUpperCase());
         if(country != null) {
             return country;            
         } else {

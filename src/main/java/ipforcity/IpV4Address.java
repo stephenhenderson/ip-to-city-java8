@@ -10,7 +10,10 @@ public class IpV4Address {
     private final String ipString;
 
     public IpV4Address(String ipAddress) throws IllegalArgumentException {
-        this.ipString = ipAddress;
+    	if(!IP_V4_REGEX.matcher(ipAddress).matches()) {
+    		throw new IllegalArgumentException("Invalid ipv4 address: " + ipAddress);
+    	}
+    	this.ipString = ipAddress;
     }
     
     @Override

@@ -1,0 +1,15 @@
+# Paths to local copies of the uncompressed maxmind GeoLite2 city csv files
+# These are freely obtainable from the maxmind website: 
+# http://geolite.maxmind.com/download/geoip/database/GeoLite2-City-CSV.zip
+
+maxmindLocationFile: /tmp/GeoLite2-City-CSV_20150505/GeoLite2-City-Locations-en.csv
+maxmindBlocksFile: /tmp/GeoLite2-City-CSV_20150505/GeoLite2-City-Blocks-IPv4.csv
+
+# WebServer Port setup
+server:
+  applicationConnectors:
+  - type: http
+    port: 8080
+  adminConnectors:
+  - type: http
+    port: 8081

@@ -18,9 +18,10 @@ public class NonEmptyUpperCaseAsciiString {
     }
     
     public static boolean isUpperCaseAscii(String s) {
-        return StringUtils.isAllUpperCase(s) && 
-                StringUtils.isAsciiPrintable(s) && 
-                StringUtils.isNotBlank(s);
+    	boolean noLowerCaseAscii = s.chars().allMatch(ch -> ch < 'a' || ch > 'z');
+        return noLowerCaseAscii && 
+        	   StringUtils.isNotBlank(s) &&
+                StringUtils.isAsciiPrintable(s);
     }
 
     @Override
